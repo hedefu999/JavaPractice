@@ -1,0 +1,6 @@
+# JavaPractice Java技术栈实战项目
+
+实践J2EE需要占用更多的文件，不能像JavaLearning那样可以在单文件里用main函数测试J2SE的内容
+故有此项目
+
+每个maven模块为一个项目

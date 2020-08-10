@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/java_practice
+      username: root
+      password: 123456
+
+
+  #      不知道为啥有下面几行就报错
+  #      initial-size: 5
+  #      max-active: 10
+  #      filter: stat,wall # 设置过滤
+  #      connect-properties: druid.stat.mergeSql=true #在页面看到的指标
+  #      use-global-data-source-stat: true
+
+  #缺少这一行会报
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+#    consumer:
+#      bootstrap-servers: 127.0.0.1:9092
+
+redis:
+  host: localhost
+  port: 6379
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 下面配错的话报 org.xml.sax.SAXParseException Content is not allowed in prolog
+  mapper-locations: classpath:mapper/*.xml
+
+logging:
+  level:
+    com.icodingedusales: debug
+  pattern:
+    console: "%d{hh:mm:ss:SSS}-%m%n"
